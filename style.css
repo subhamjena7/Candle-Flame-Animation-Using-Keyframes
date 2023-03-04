@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #7A1E1E;
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #7A1E1E;
+    box-shadow: 4px 8px 16px #000010;
+    height: 400px;
+    width: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+h1{
+    background: #521515;
+    height: 40px;
+    text-align: center;
+    color: #ffad00;
+}
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.candle{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.flame{
+    height: 30px;
+    width: 15px;
+    background: #ffad00;
+    border-radius: 8px 8px 8px 8px/20px 20px 8px 8px;
+    box-shadow: 0 0 10px 0 #ffad00;
+    animation: animate 15s ease-in-out infinite, glow 2s infinite ease;
+}
+.wick{
+    height: 12px;
+    width: 4px;
+    background: #ad87a9;
+}
+.wax{
+    width: 40px;
+    height: 110px;
+    background: #ffff;
+    border-radius: 6px;
+    box-shadow: inset -15px 0 0 -6px #d8deed;
+}
+.stand{
+    width: 100px;
+    height: 20px;
+    background-color: #521515;
+    border-radius: 4px;
+}
+@keyframes animate{
+    0%,22%,50%,62%,82%,100%{
+        border-radius: 2px 14px 8px 8px/20px 20px 8px 8px;
+    }
+    14%,32%,56%,73%,89%{
+        border-radius: 14px 2px 8px 8px/20px 20px 8px 8px;
+    }
+}
+@keyframes glow{
+    0%,30%,60%,83%,100%{
+        box-shadow: 0 0 20px #ffad00;
+    }
+    20%,0%,72%{
+        box-shadow: 0 0 20px #ffad00;
+    }
+}
